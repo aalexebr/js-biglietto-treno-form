@@ -11,6 +11,7 @@ generate.addEventListener("click",
             const minor = document.getElementById('minor').value
             const over = document.getElementById('over').value
             let price = km * 0.21
+            document.getElementById("discountType").innerHTML = "Prezzo standard"
             if(value == minor){
                 price -= price * 0.2
                 document.getElementById("discountType").innerHTML = "Prezzo ridotto"
@@ -21,7 +22,7 @@ generate.addEventListener("click",
             }
             console.log('final', price )
             document.getElementById('cost').innerHTML = price.toFixed(2) + '$'
-            document.getElementById("discountType").innerHTML = "Prezzo standard"
+            
         
             const name = document.getElementById("name").value
             document.getElementById("passName").innerHTML = name
