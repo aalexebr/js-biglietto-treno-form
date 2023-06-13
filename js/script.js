@@ -15,9 +15,11 @@ generate.addEventListener("click",
             price -= price * 0.4
             console.log('over', price )
         }
-        console.log('finale', price )
-
-        document.querySelector("h1").innerHTML = price.toFixed(2)
+        console.log('final', price )
+        document.getElementById('cost').innerHTML = price.toFixed(2)
+        if(isNaN(price)){
+            alert('idiot')
+        }
        
     }
     

@@ -8,30 +8,58 @@
     <title> calcolo del prezzo del biglietto del treno</title>
 </head>
 <body>
-    <main>
+    <main class="debug">
         <section>
-            <form action="">
-                <label for="">Name Surname</label>
-                <input type="text" placeholder="insert full name">
-                <label for="km">KM</label>
-                <input type="text" name="km" placeholder="insert km" id="km">
-                <label for="age">Age</label>
-                <select name="age" id="age">
-                    <option value="minor" id="minor"> 0-17</option>
-                    <option value="over" id="over">  65+</option>
-                    <option value="none">none of the above</option>
-                </select>
-                <button type="button" id="submit">
-                    apply
-                </button>
-                <button type="reset"> reset</button>
-            </form>
             <h1>
-                
+                calcola biglietto
             </h1>
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Name Surname</label>
+                            <input type="text" placeholder="insert full name">
+                        </div>
+                        <div class="col">
+                          <label for="km">KM</label>
+                            <input type="text" name="km" placeholder="insert km" id="km">  
+                        </div>
+                        <div class="col">
+                            <label for="age">Age</label>
+                        <select name="age" id="age">
+                            <option value="minor" id="minor"> 0-17</option>
+                            <option value="over" id="over">  65+</option>
+                            <option value="none">none of the above</option>
+                        </select>
+                        </div>
+                        
+                    </div>
+                    <button type="button" id="submit">
+                        apply
+                    </button>
+                    <button type="reset"> reset</button>
+                </form>
+            </div>  
         </section>
         <section>
+            <h1>
+                il tuo biglietto
+            </h1>
+            <div class="container container2">
+                <h2>
+                    dettagli pass
+                </h2>
+                <div class="row">
+                    <div class="col col-4">
+                        
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
 
+                </div>
+            </div>
+            <h1  id="cost"></h1>
         </section>
     </main>
     <script src="js/script.js" type=""></script>
