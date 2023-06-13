@@ -6,20 +6,29 @@ generate.addEventListener("click",
         const value = select.options[select.selectedIndex].value;
         const minor = document.getElementById('minor').value
         const over = document.getElementById('over').value
-        let price = km * 0.1
+        let price = km * 0.21
         if(value == minor){
             price -= price * 0.2
-            console.log('minor', price )
+            document.getElementById("discountType").innerHTML = "Prezzo ridotto"
         }
         else if(value == over){
             price -= price * 0.4
-            console.log('over', price )
+            document.getElementById("discountType").innerHTML = "Prezzo over65"
         }
         console.log('final', price )
-        document.getElementById('cost').innerHTML = price.toFixed(2)
+        document.getElementById('cost').innerHTML = price.toFixed(2) + '$'
+        document.getElementById("discountType").innerHTML = "Prezzo standard"
         if(isNaN(price)){
             alert('idiot')
         }
+        const name = document.getElementById("name").value
+        document.getElementById("passName").innerHTML = name
+
+        let carrigeNumber = Math.floor(Math.random()*(10 - 1 +1) + 1)
+        document.getElementById("carrige").innerHTML = carrigeNumber
+
+        let ticketCode = Math.floor(Math.random()*(9999 - 1000 +1) + 1000)
+        document.getElementById("ticketCode").innerHTML = ticketCode
        
     }
     
