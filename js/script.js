@@ -6,7 +6,7 @@ generate.addEventListener("click",
         const value = select.options[select.selectedIndex].value;
         const minor = document.getElementById('minor').value
         const over = document.getElementById('over').value
-        let price = km * 0.21
+        let price = km * 0.1
         if(value == minor){
             price -= price * 0.2
             console.log('minor', price )
@@ -15,14 +15,10 @@ generate.addEventListener("click",
             price -= price * 0.4
             console.log('over', price )
         }
-        console.log('none', price )
-        
+        console.log('finale', price )
+
+        document.querySelector("h1").innerHTML = price.toFixed(2)
        
-    
-
-        
-
-
     }
     
 );
